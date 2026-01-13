@@ -8,7 +8,7 @@ st.set_page_config(page_title="Mentora Institute", layout="wide")
 
 # --- EMAIL SETTINGS ---
 SENDER_EMAIL = "anilkumar22.analyst@gmail.com"
-APP_PASSWORD = "YOUR_APP_PASSWORD"  # ⚠️ Replace with your Gmail App Password
+APP_PASSWORD = "wwfi hdbz zwvi vpbi"  # ⚠️ Replace with your Gmail App Password
 
 
 # --- FUNCTION TO SEND EMAIL ---
@@ -234,3 +234,4 @@ elif page == "About Us":
     if st.button("🏠 Back to Home"):
         st.session_state.page = "Home"
         st.rerun()
+
