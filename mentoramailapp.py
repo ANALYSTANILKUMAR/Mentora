@@ -1,5 +1,6 @@
 import streamlit as st
 import smtplib
+import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -132,7 +133,12 @@ elif page == "Join Now":
 
     with st.form("join_form"):
         name = st.text_input("Full Name")
-        dob = st.date_input("Date of Birth")
+        # dob = st.date_input("Date of Birth")
+        dob = st.date_input(
+            "Date of Birth",
+            min_value=datetime.date(1990, 1, 1),
+            max_value=datetime.date.today()
+        )
         email = st.text_input("Email Address")
         phone = st.text_input("Mobile Number")
         qualification = st.text_input("Qualification")
@@ -180,7 +186,12 @@ elif page == "Enquiry":
 
     with st.form("enquiry_form"):
         enq_name = st.text_input("Full Name")
-        enq_dob = st.date_input("Date of Birth")
+        # enq_dob = st.date_input("Date of Birth")
+        enq_dob = st.date_input(
+            "Date of Birth",
+            min_value=datetime.date(1990, 1, 1),
+            max_value=datetime.date.today()
+        )
         enq_mobile = st.text_input("Mobile Number")
         enq_email = st.text_input("Email Address")
         query = st.text_area("Your Query / Question")
@@ -234,4 +245,3 @@ elif page == "About Us":
     if st.button("🏠 Back to Home"):
         st.session_state.page = "Home"
         st.rerun()
-
